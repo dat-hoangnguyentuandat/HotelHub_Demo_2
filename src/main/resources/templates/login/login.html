@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - HotelHub</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 22V12H15V22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>HotelHub</span>
+            </div>
+            
+            <div class="hero-content">
+                <h1>Excellence in Hospitality.</h1>
+                <p>Manage guests, reservations, and services seamlessly from one central dashboard.</p>
+            </div>
+        </div>
+        
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div class="form-container">
+                <h2>Chào mừng trở lại!</h2>
+                <p class="subtitle">Nhập thông tin của bạn để truy cập vào tài khoản.</p>
+                
+                <form th:action="@{/login}" method="post">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="password-label">
+                            <label for="password">Mật khẩu</label>
+                            <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                        </div>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Đăng nhập</button>
+                </form>
+                
+                <div class="divider">
+                    <span>Hoặc tiếp tục với</span>
+                </div>
+                
+                <div class="social-buttons">
+                    <button type="button" class="btn-social">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M19.8 10.2273C19.8 9.51818 19.7364 8.83636 19.6182 8.18182H10V12.05H15.4818C15.2364 13.3 14.5273 14.3591 13.4727 15.0682V17.5773H16.7636C18.7182 15.8364 19.8 13.2727 19.8 10.2273Z" fill="#4285F4"/>
+                            <path d="M10 20C12.7 20 14.9636 19.1045 16.7636 17.5773L13.4727 15.0682C12.5727 15.6682 11.4182 16.0227 10 16.0227C7.39545 16.0227 5.19091 14.2636 4.40455 11.9H0.995453V14.4909C2.78636 18.0591 6.10909 20 10 20Z" fill="#34A853"/>
+                            <path d="M4.40455 11.9C4.19091 11.3 4.06818 10.6591 4.06818 10C4.06818 9.34091 4.19091 8.7 4.40455 8.1V5.50909H0.995453C0.359091 6.77273 0 8.19545 0 10C0 11.8045 0.359091 13.2273 0.995453 14.4909L4.40455 11.9Z" fill="#FBBC04"/>
+                            <path d="M10 3.97727C11.5545 3.97727 12.9409 4.48182 14.0273 5.51818L16.9409 2.60455C14.9591 0.790909 12.6955 0 10 0C6.10909 0 2.78636 1.94091 0.995453 5.50909L4.40455 8.1C5.19091 5.73636 7.39545 3.97727 10 3.97727Z" fill="#EA4335"/>
+                        </svg>
+                        Google
+                    </button>
+                    
+                    <button type="button" class="btn-social">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M20 10C20 4.47715 15.5229 0 10 0C4.47715 0 0 4.47715 0 10C0 14.9912 3.65684 19.1283 8.4375 19.8785V12.8906H5.89844V10H8.4375V7.79688C8.4375 5.29063 9.93047 3.90625 12.2146 3.90625C13.3084 3.90625 14.4531 4.10156 14.4531 4.10156V6.5625H13.1922C11.95 6.5625 11.5625 7.3334 11.5625 8.125V10H14.3359L13.8926 12.8906H11.5625V19.8785C16.3432 19.1283 20 14.9912 20 10Z" fill="#1877F2"/>
+                        </svg>
+                        Facebook
+                    </button>
+                </div>
+                
+                <p class="register-link">
+                    Bạn chưa có tài khoản? <a th:href="@{/register}">Đăng ký</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

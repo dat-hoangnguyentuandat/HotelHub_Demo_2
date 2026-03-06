@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #1a1a1a;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #666;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Content */
+.payment-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Booking Info Card */
+.booking-info {
+    background: #E8DDD0;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.booking-info h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.booking-info .created-by {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.info-label {
+    color: #666;
+}
+
+.info-value {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.divider {
+    height: 1px;
+    background: #ccc;
+    margin: 24px 0;
+}
+
+/* QR Code Card */
+.qr-code-card {
+    background: #E8DDD0;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-code-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+}
+
+.qr-code {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.qr-code img {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+/* Payment Confirmation */
+.payment-confirmation {
+    background: #E8DDD0;
+    padding: 40px;
+    border-radius: 12px;
+    grid-column: 1 / -1;
+}
+
+.payment-confirmation h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+}
+
+.upload-section {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.upload-area {
+    flex: 1;
+}
+
+.upload-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.upload-tab {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #d0c4b8;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.upload-tab.active {
+    background: white;
+    color: #1a1a1a;
+}
+
+.upload-box {
+    background: #d0c4b8;
+    border: 2px dashed #999;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.upload-box:hover {
+    border-color: #666;
+    background: #c5b9ad;
+}
+
+.submit-btn {
+    padding: 12px 32px;
+    background: #8B6F47;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 16px;
+}
+
+.submit-btn:hover {
+    background: #7a5f3a;
+}
+
+.preview-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.preview-image h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.image-preview {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .payment-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .upload-section {
+        flex-direction: column;
+    }
+    
+    .preview-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .booking-info,
+    .qr-code-card,
+    .payment-confirmation {
+        padding: 24px;
+    }
+    
+    .header {
+        padding: 20px;
+    }
+}
